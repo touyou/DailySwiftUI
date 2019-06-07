@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SignUp.swift
 //  DailySwiftUI
 //
 //  Created by 藤井陽介 on 2019/06/07.
@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct SignUp : View {
     var body: some View {
-        Text("Hello World")
+        Text("Sign Up")
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct SignUp_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignUp()
     }
 }
 #endif
