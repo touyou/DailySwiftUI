@@ -10,7 +10,14 @@ import SwiftUI
 
 struct SignUp : View {
     var body: some View {
-        Text("Sign Up")
+        VStack {
+            HStack {
+                Text("ID")
+            }
+            HStack {
+                Text("Pass")
+            }
+        }
     }
 }
 

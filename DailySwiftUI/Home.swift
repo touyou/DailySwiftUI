@@ -13,7 +13,7 @@ struct Home: View {
         NavigationView {
             List {
                 ForEach(pages) { page in
-                    NavigationButton(destination: page.destination) {
+                    NavigationLink(destination: page.destination) {
                         Text(page.name).font(.subheadline).padding()
                     }
                 }
