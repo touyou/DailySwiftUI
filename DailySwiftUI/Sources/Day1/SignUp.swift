@@ -9,14 +9,27 @@
 import SwiftUI
 
 struct SignUp : View {
+    @State private var modeNumber = 0
+    @State private var idString = ""
+    @State private var passString = ""
+
+    var modes = ["Sign In", "Sign Up"]
+
     var body: some View {
         VStack {
-            HStack {
-                Text("ID")
+            TextField("Email", text: $idString) {
+                print(self.idString)
             }
-            HStack {
-                Text("Pass")
+            SecureField("Password", text: $passString) {
+                print(self.passString)
             }
+            Picker(selection: $modeNumber, label: Text("")) {
+                ForEach(0 ..< modes.count) {
+                    Text(self.modes[$0])
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(EdgeInsets(top: 0.0, leading: 32.0, bottom: 0.0, trailing: 32.0))
         }
     }
 }
